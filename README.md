@@ -18,24 +18,31 @@
 
 ```java
 import fastmouselogger.*;
+import java.awt.image.BufferedImage;
 import java.nio.file.Path;
+import java.util.List;
 
 public class Demo {
     public static void main(String[] args) throws Exception {
         Path logDir = Path.of("logs/mouse");
 
-        // 1. Initialize background raw mouse logger
+        // 1. Live background capture
         try (FastMouseLogger logger = new FastMouseLogger(logDir, 5000)) {
             logger.addListener(rec -> {
                 if (rec.isButtonPress()) {
-                    System.out.println("Click at timestamp: " + rec.timestamp());
+                    System.out.printf("Click at t=%d flags=0x%02X\n", rec.timestamp(), rec.flags());
                 }
             });
 
             logger.start();
-            Thread.sleep(5000);
-            logger.stop(); // Flushes automatically to .mousebin
+            Thread.sleep(3000);
+            logger.stop(); // Flushes to timestamped .mousebin
         }
+
+        // 2. High-speed FastFileFormat codec & heatmap rendering
+        Path sessionFile = logDir.resolve("session.mousebin");
+        List<MouseEventRecord> events = MousebinCodec.readFromFile(sessionFile);
+        BufferedImage heatmap = HeatmapGenerator.generate(events, 1920, 1080);
     }
 }
 ```
