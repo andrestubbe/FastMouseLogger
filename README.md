@@ -47,6 +47,39 @@ public class Demo {
 }
 ```
 
+## Table of Contents
+
+- [Why FastMouseLogger?](#why-fastmouselogger)
+- [Quick Start](#quick-start)
+- [Key Features](#key-features)
+- [Real-World Scenarios](#real-world-scenarios)
+- [Performance Benchmarks](#performance-benchmarks)
+- [API Quick Reference](#api-quick-reference)
+- [Technical Examples & Hero Demos](#technical-examples--hero-demos)
+- [Installation](#installation)
+- [Documentation](#documentation)
+- [Platform Support](#platform-support)
+- [License](#license)
+- [Related Projects](#related-projects)
+
+---
+
+## Why FastMouseLogger?
+
+Standard desktop interaction loggers and UI analytics tools in Java introduce severe performance degradation and data loss:
+
+- **OS Ballistics & Acceleration**: Standard AWT/Swing listeners capture modified, non-linear coordinates instead of raw physical sensor movement.
+- **Heavy JSON/CSV Storage Overhead**: Text-based logging formats inflate disk storage to gigabytes and cause massive serialization GC pauses.
+- **Event Dropping at High Polling Rates**: Gaming and esports mice (1,000 to 8,000 Hz) flood standard queues, causing thread lockups and dropped clicks.
+- **Slow Offline Rendering**: Reconstructing heatmaps and trajectories from raw logs usually requires external Python scripts and minutes of rendering time.
+
+**FastMouseLogger** solves this fundamentally:
+
+- **True Sub-Millisecond Raw Stream**: Captures raw hardware sensor deltas directly via `FastMouse` (`WM_INPUT`).
+- **Dense FastFileFormat Binary Storage**: Serializes millions of events into ultra-compact `.mousebin` files with VarInt delta compression (Payload ID `0x0003`).
+- **Zero-GC Streaming Pipeline**: Pre-allocated ring buffers and bulk block writing avoid JVM heap churn.
+- **High-Speed In-Process Heatmaps**: Renders high-density ARGB movement trajectories and click density heatmaps at over **550 Full HD frames/sec**.
+
 ---
 
 ## Key Features
