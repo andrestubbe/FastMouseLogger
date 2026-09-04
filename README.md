@@ -1,6 +1,6 @@
-# FastMouseLogger 0.1.0 [ALPHA] — Native Raw Mouse Logging, Stream Compression & Heatmap Engine
+# FastMouseLogger 0.1.1 [ALPHA] — Native Raw Mouse Logging, Stream Compression & Heatmap Engine
 
-[![Status](https://img.shields.io/badge/status-0.1.0-brightgreen.svg)](https://github.com/andrestubbe/FastMouseLogger/releases/tag/0.1.0)
+[![Status](https://img.shields.io/badge/status-0.1.1-brightgreen.svg)](https://github.com/andrestubbe/FastMouseLogger/releases/tag/0.1.1)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://www.java.com)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010+-lightgrey.svg)]()
@@ -120,26 +120,26 @@ FastMouseLogger is profiled using **JMH** to guarantee maximum stream throughput
     <dependency>
         <groupId>com.github.andrestubbe</groupId>
         <artifactId>FastMouseLogger</artifactId>
-        <version>0.1.0</version>
+        <version>0.1.1</version>
     </dependency>
     <dependency>
         <groupId>com.github.andrestubbe</groupId>
         <artifactId>FastMouse</artifactId>
-        <version>0.1.0</version>
+        <version>0.1.1</version>
     </dependency>
     <dependency>
         <groupId>com.github.andrestubbe</groupId>
         <artifactId>FastFileFormat</artifactId>
-        <version>0.1.0</version>
+        <version>0.1.1</version>
     </dependency>
     <dependency>
         <groupId>com.github.andrestubbe</groupId>
         <artifactId>FastBinary</artifactId>
-        <version>0.1.0</version>
+        <version>0.1.1</version>
     </dependency>
     <dependency>
         <groupId>com.github.andrestubbe</groupId>
-        <artifactId>fastcore</artifactId>
+        <artifactId>FastCore</artifactId>
         <version>0.1.0</version>
     </dependency>
 </dependencies>
@@ -153,11 +153,11 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.andrestubbe:FastMouseLogger:0.1.0'
-    implementation 'com.github.andrestubbe:FastMouse:0.1.0'
-    implementation 'com.github.andrestubbe:FastFileFormat:0.1.0'
-    implementation 'com.github.andrestubbe:FastBinary:0.1.0'
-    implementation 'com.github.andrestubbe:fastcore:0.1.0'
+    implementation 'com.github.andrestubbe:FastMouseLogger:0.1.1'
+    implementation 'com.github.andrestubbe:FastMouse:0.1.1'
+    implementation 'com.github.andrestubbe:FastFileFormat:0.1.1'
+    implementation 'com.github.andrestubbe:FastBinary:0.1.1'
+    implementation 'com.github.andrestubbe:FastCore:0.1.0'
 }
 ```
 
@@ -165,10 +165,10 @@ dependencies {
 
 Download the latest JARs directly to add them to your classpath:
 
-1. 🖱️ **[FastMouseLogger-0.1.0.jar](https://github.com/andrestubbe/FastMouseLogger/releases/download/0.1.0/FastMouseLogger-0.1.0.jar)** (Mouse Logger & Heatmap Engine)
-2. ⚡ **[FastMouse-0.1.0.jar](https://github.com/andrestubbe/FastMouse/releases/download/0.1.0/FastMouse-0.1.0.jar)** (Native Win32 Raw Mouse Input)
-3. 📄 **[FastFileFormat-0.1.0.jar](https://github.com/andrestubbe/FastFileFormat/releases/download/0.1.0/FastFileFormat-0.1.0.jar)** (Dual Binary & Text File Format)
-4. ⚡ **[FastBinary-0.1.0.jar](https://github.com/andrestubbe/FastBinary/releases/download/0.1.0/FastBinary-0.1.0.jar)** (VarInt & Binary Packing)
+1. 🖱️ **[FastMouseLogger-0.1.1.jar](https://github.com/andrestubbe/FastMouseLogger/releases/download/0.1.1/FastMouseLogger-0.1.1.jar)** (Mouse Logger & Heatmap Engine)
+2. ⚡ **[FastMouse-0.1.1.jar](https://github.com/andrestubbe/FastMouse/releases/download/0.1.1/FastMouse-0.1.1.jar)** (Native Win32 Raw Mouse Input)
+3. 📄 **[FastFileFormat-0.1.1.jar](https://github.com/andrestubbe/FastFileFormat/releases/download/0.1.1/FastFileFormat-0.1.1.jar)** (Dual Binary & Text File Format)
+4. ⚡ **[FastBinary-0.1.1.jar](https://github.com/andrestubbe/FastBinary/releases/download/0.1.1/FastBinary-0.1.1.jar)** (VarInt & Binary Packing)
 5. ⚙️ **[fastcore-0.1.0.jar](https://github.com/andrestubbe/FastCore/releases/download/0.1.0/fastcore-0.1.0.jar)** (Foundation Library)
 
 ---
