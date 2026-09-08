@@ -12,6 +12,8 @@
 
 **FastMouseLogger** captures raw Windows mouse input directly via **[FastMouse](https://github.com/andrestubbe/FastMouse)** (WM_INPUT bypass of OS ballistics), compresses events in real-time into binary `.mousebin` logs using **[FastFileFormat](https://github.com/andrestubbe/FastFileFormat)** & **[FastBinary](https://github.com/andrestubbe/FastBinary)**, and computes high-resolution behavioral heatmaps and click density distributions.
 
+[Watch Demo (YouTube)] | [Watch JMH Benchmark (Youtube)]
+
 ---
 
 ## Quick Start
